@@ -1,3 +1,6 @@
-
-// Importing the variables file
-@use "./components/App"
+// Importing ForAll
+@use "./forAll/forAll";
+// Importing Components
+@use "./components/App";
+@use "./components/CreateAccount";
+@use "./components/TopBar"
