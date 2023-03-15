@@ -7,3 +7,9 @@
  + For add a Fonctionnality : ```git commit -m "new-TheNewFonctionnality(if other informations)"```
  + For remove a Fonctionnality / Files : ```git commit -m "delete-TheThingToDeletes(if other informations)"```
  + For Update a Fonctionnality / Files : ```git commit -m "Update-TheThingToUpdate-IfItsFinish(Finish or WIP)"```
+
+## Members : 
++ Xenom 
++ Doska 
++ Godlonx
++ LeRouge 
