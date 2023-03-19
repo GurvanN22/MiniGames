@@ -1,5 +1,18 @@
 .TopBar {
-    height: 20vh;
+    height: 10vh;
     width: 100vw;
-    background-color: #F2F2F2;
+    background-color: #2F2F2F;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top : 3px solid rgb(57, 224, 169);
+    border-bottom : 3px solid rgb(204, 33, 204);
+
+}
+
+.TopBar-logo {
+    height: 7vh;
+    width: 7vw;
+    margin-left: 2vw;
 }
