@@ -1,0 +1,67 @@
+.CreateAccount {
+background-color: rgba(78, 45, 211, 0.46);
+display: flex;
+align-items: center;
+flex-direction: column;
+height: 80vh;
+width: 100vw;
+}
+
+.CreateAccount-Center {
+display: flex;
+flex-direction: column;
+align-items: center;
+width: fit-content;
+height: 70vw;
+}
+
+.CreateAccount-Center > h1 {
+    margin: 4vh 0 2vh 0;
+    font-size: 2vw;
+} 
+
+.CreateAccount-Center > h2 {
+    margin: 4vh 0 0 0;
+    font-size: 1.5vw;
+} 
+
+.CreateAccount-Form {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    height: 7vh;
+    width: 25vw;
+    border: rgb(57, 224, 169) 3px solid;
+    margin-top: 1vh;
+}
+.CreateAccount-30width {
+    width: 30vw;
+}
+
+.CreateAccount-Form-Image {
+    height: 3vw;
+    width: 3vw;
+    margin-left: 1vw;
+    padding-right: 1vw;
+}
+.CreateAccount-Form-Image-left {
+    border-right : 3px solid rgb(57, 224, 169);
+}
+
+.CreateAccount-Form-Input {
+    width: 19vw;
+    font-size: 2rem;
+}
+.CreateAccount-Bnt {
+    background-color: rgb(57, 224, 169);
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    font-size: 2vw;
+    margin-top: 2vw;
+}
+.CreateAccount-Error {
+    color: red;
+    font-size: 1.5vw;
+    margin-top: 1vw;
+}
