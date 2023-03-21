@@ -17,7 +17,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 5vw;
+        font-size: 0;
+        text-decoration: none;
         color: white;
         cursor: pointer;
         transition: all 0.5s ease;
@@ -25,10 +26,4 @@
             transform: scale(1.1);
         }
     }
-}
-
-.Cards{
-width: 10vw;
-height: 10vw;
-
 }
