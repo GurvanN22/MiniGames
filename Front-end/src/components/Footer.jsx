@@ -6,8 +6,8 @@ function Footer() {
           <h1>Créateurs :</h1>
           <p>- Le Rouge</p>
           <p>- Doska </p>
-          <p> - Godlonx </p>
-          <p> - Xenon </p>
+          <p>- Godlonx </p>
+          <p>- Xenon </p>
         </div>
       </div>
     )
