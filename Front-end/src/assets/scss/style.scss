@@ -2,6 +2,7 @@
 @use "./forAll/forAll";
 
 // Importing Components
-@use "./components/App";
+@use "./components/MainPage";
 @use "./components/CreateAccount";
-@use "./components/TopBar"
+@use "./components/TopBar";
+@use "./components/Footer";
