@@ -1,0 +1,22 @@
+.Footer-MainContainer {
+    width: 100vw;
+    height: fit-content;
+    background: rgba(54, 46, 147, 0.75);
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+
+.Footer-Pseudos {
+    padding: 4vh 0 4vh 0;
+    margin-left: 3vw;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.Footer-Pseudos > p {
+    margin: 0 0 5px 0;
+}

@@ -59,9 +59,20 @@ height: 70vw;
     border: none;
     font-size: 2vw;
     margin-top: 2vw;
+    cursor: pointer;
 }
 .CreateAccount-Error {
     color: red;
     font-size: 1.5vw;
     margin-top: 1vw;
+}
+
+.CreateAccount-Bnt-Err {
+    background-color: rgb(122, 122, 122);
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    font-size: 2vw;
+    margin-top: 2vw;
+    color : red ; 
 }
