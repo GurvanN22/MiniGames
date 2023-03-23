@@ -12,13 +12,17 @@ function Memory(props){
     function addCheckCard(card){ //add the card to the check card array
         if (CheckCard.length < 1){
             CheckCard.push(card)
+            return true
         }else if (CheckCard.length <2){
         for (let i = 0; i < CheckCard.length; i++) {
-            if (CheckCard[i] != card){
+            console.log(CheckCard[i].card!==card.card)
+            if (CheckCard[i].card!==card.card){
                 CheckCard.push(card)
+                return true
             }
         }
     }
+    return false
     }
 
     function DoubleArray(Array){
@@ -77,10 +81,12 @@ function Memory(props){
     
 
  function checkInformation(a){
-        addCheckCard(a)
+        if (addCheckCard(a)){
         document.getElementById(a.card).style.backgroundColor = 'red'
         document.getElementById(a.card).style.fontSize = '2vw'
         checkDouble()
+
+ }
     }
 
 
