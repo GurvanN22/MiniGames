@@ -1,8 +1,9 @@
 // Importing ForAll
-@use "./forAll/forAll";
+@use "ForAll/ForAll";
 
 // Importing Components
-@use "./components/App";
-@use "./components/CreateAccount";
-@use "./components/TopBar";
-@use "./components/Memory";
+@use "components/MainPage";
+@use "components/CreateAccount";
+@use "components/TopBar";
+@use "components/Footer";
+@use "components/Memory";

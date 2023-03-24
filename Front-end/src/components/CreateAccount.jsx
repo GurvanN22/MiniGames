@@ -42,7 +42,7 @@ function CreateAccount() {
           <img src= {secondPassWordShow ? eyeOpenImage : eyeCloseImage} className ="CreateAccount-Form-Image" alt="Enveloppe image" onClick={() => SetPassSecondWordshow(!secondPassWordShow)}/>
         </div>
         {equalPassWord ? null : <p className="CreateAccount-Error"> Les mots de passe ne sont pas identiques </p>}
-        <button onClick = { () => checkInformation()} className = "CreateAccount-Bnt"> Crée le compte </button>
+        <button onClick = { () => checkInformation()} className = {equalPassWord ? "CreateAccount-Bnt" : "CreateAccount-Bnt-Err"}> Crée le compte </button>
       </div>
     </div>
   )
