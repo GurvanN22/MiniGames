@@ -5,7 +5,8 @@ import Logo from '../assets/img/react.svg'
 
 function Memory(props){
 
-    let Card =RandomArray(DoubleArray(props.MemoryCard)) //Double the array and randomize it Duo(naem,name,copy)
+    let GuessCardToGuess = props.MemoryCard.length //nombre de carte à trouver
+    let Card =RandomArray(DoubleArray(props.MemoryCard)) //Double the array and randomize it Duo(name,name,copy)
     let CheckCard = []  //array to check if the 2 cards are the same
 
 
@@ -53,6 +54,12 @@ function Memory(props){
                         document.getElementById(CheckCard[i].card).disabled = true //désactive les cartes
                     }
                     CheckCard = [] //vide le tableau pour pouvoir cliquer sur une nouvelle paire
+                    GuessCardToGuess -= 1 //enlève 1 carte à trouver
+                    if (GuessCardToGuess === 0){
+                        console.log('Gagné')
+                        document.getElementById('start').style.display = 'block'
+                        alert('Gagné')
+                    }
                 }else{
                     for (let i = 0; i< CheckCard.length; i++){      //Remet les cartes en bleu
                         document.getElementById(CheckCard[i].card).style.backgroundColor = 'blue'
@@ -76,6 +83,7 @@ function Memory(props){
 
     const DisplayCard = Card.map((card) =>  //affiche les cartes
             <button onClick = { () => checkInformation({card})} className='Cards' id={card}>{removeCopyForDisplay(card)}</button>
+
     )
 
     
