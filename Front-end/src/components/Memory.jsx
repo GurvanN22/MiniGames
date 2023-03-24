@@ -5,20 +5,25 @@ import Logo from '../assets/img/react.svg'
 
 function Memory(props){
 
-    let Card =RandomArray(DoubleArray(props.MemoryCard)) //Double the array and randomize it Duo(naem,name,copy)
+    let GuessCardToGuess = props.MemoryCard.length //nombre de carte à trouver
+    let Card =RandomArray(DoubleArray(props.MemoryCard)) //Double the array and randomize it Duo(name,name,copy)
     let CheckCard = []  //array to check if the 2 cards are the same
 
 
     function addCheckCard(card){ //add the card to the check card array
         if (CheckCard.length < 1){
             CheckCard.push(card)
+            return true
         }else if (CheckCard.length <2){
         for (let i = 0; i < CheckCard.length; i++) {
-            if (CheckCard[i] != card){
+            console.log(CheckCard[i].card!==card.card)
+            if (CheckCard[i].card!==card.card){
                 CheckCard.push(card)
+                return true
             }
         }
     }
+    return false
     }
 
     function DoubleArray(Array){
@@ -49,6 +54,12 @@ function Memory(props){
                         document.getElementById(CheckCard[i].card).disabled = true //désactive les cartes
                     }
                     CheckCard = [] //vide le tableau pour pouvoir cliquer sur une nouvelle paire
+                    GuessCardToGuess -= 1 //enlève 1 carte à trouver
+                    if (GuessCardToGuess === 0){
+                        console.log('Gagné')
+                        document.getElementById('start').style.display = 'block'
+                        alert('Gagné')
+                    }
                 }else{
                     for (let i = 0; i< CheckCard.length; i++){      //Remet les cartes en bleu
                         document.getElementById(CheckCard[i].card).style.backgroundColor = 'blue'
@@ -72,15 +83,18 @@ function Memory(props){
 
     const DisplayCard = Card.map((card) =>  //affiche les cartes
             <button onClick = { () => checkInformation({card})} className='Cards' id={card}>{removeCopyForDisplay(card)}</button>
+
     )
 
     
 
  function checkInformation(a){
-        addCheckCard(a)
+        if (addCheckCard(a)){
         document.getElementById(a.card).style.backgroundColor = 'red'
         document.getElementById(a.card).style.fontSize = '2vw'
         checkDouble()
+
+ }
     }
 
 
