@@ -1,6 +1,6 @@
 import React from 'react'
-import { useState } from 'react'
-import Logo from '../assets/img/react.svg'
+//import { useState } from 'react'
+//import Logo from '../assets/img/react.svg'
 
 
 function Memory(props){
