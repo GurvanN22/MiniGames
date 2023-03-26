@@ -4,7 +4,7 @@ display: flex;
 align-items: center;
 flex-direction: column;
 height: 80vh;
-width: 100vw;
+width: 100%;
 }
 
 .CreateAccount-Center {
@@ -26,6 +26,7 @@ height: 70vw;
 } 
 
 .CreateAccount-Form {
+    background-color: white;
     justify-content: space-between;
     align-items: center;
     display: flex;
@@ -49,8 +50,11 @@ height: 70vw;
 }
 
 .CreateAccount-Form-Input {
+    background-color: white;
     width: 19vw;
     font-size: 2rem;
+    border: none;
+    text-align: center;
 }
 .CreateAccount-Bnt {
     background-color: rgb(57, 224, 169);
@@ -75,4 +79,15 @@ height: 70vw;
     font-size: 2vw;
     margin-top: 2vw;
     color : red ; 
+}
+
+.CreateAccount-Form-Pseudo {
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 7vh;
+    width: 25vw;
+    border: rgb(57, 224, 169) 3px solid;
+    margin-top: 1vh;
 }

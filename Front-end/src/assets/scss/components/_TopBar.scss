@@ -16,3 +16,17 @@
     width: 7vw;
     margin-left: 2vw;
 }
+
+.TopBar-Account-Div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.TopBar-User {
+    height: 7vh;
+    width: 4vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    cursor: pointer;
+}
