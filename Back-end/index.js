@@ -2,7 +2,7 @@
 const express = require('express');
 const { Pool, Client } = require('pg');// Constants
 const PORT = 3000;
-const HOST = '0.0.0.0';// App
+const HOST = '77.68.99.20';// Api
 const app = express();
 app.get('/', (req, res) => {
   res.send('Hello World App');
