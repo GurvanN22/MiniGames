@@ -8,7 +8,7 @@ function Footer() {
           <p>- Doska </p>
           <p>- Godlonx </p>
           <p>- Xenon </p>
-          <p>test de crontab apres minuit</p>
+          <p>- Flonox</p>
         </div>
       </div>
     )

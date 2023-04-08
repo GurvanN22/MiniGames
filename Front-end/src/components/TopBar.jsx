@@ -5,15 +5,27 @@ import { useState } from 'react'
 import {useNavigate} from 'react-router-dom';
 function TopBar() {
   const navigate = useNavigate()
-  const [ShowAccountOption, SetShowAccountOption] = useState(false);
+  const [AccountOption, SetAccountOption] = useState(false);
   const Cookie = Cookies.get()
-  if (Cookie.Pseudo === undefined) {
-    navigate('/Login')
+  const RedirectToCreateAccount = () => {
+    navigate('/CreateAccount')
   }
     return (
       <div className="TopBar">
-        <img src={Logo} alt="Logo de ... " className='TopBar-logo'/>
-        <img src= {account} alt = "image pour les joueurs non connecter à leur compte" className='TopBar-User'/>
+      <img src={Logo} alt="Logo de ... " className='TopBar-logo'/>
+        {AccountOption ? (
+          <div className='TopBar-AccountInformation'>
+            <img src= {account} alt = "image pour les joueurs non connecter à leur compte" className='TopBar-User' onClick={() => SetAccountOption(!AccountOption)}/>
+            <p>Connection</p>
+            <p onClick={() => RedirectToCreateAccount()}>Créer un compte</p>
+          </div>
+
+        ) : (
+          <div className='TopBar-AccountInformationClose'>
+            <img src= {account} alt = "image pour les joueurs non connecter à leur compte" className='TopBar-User' onClick={() => SetAccountOption(!AccountOption)}/>
+          </div>
+          )
+        }
       </div>
     )
 }

@@ -25,12 +25,31 @@ function MainPage() {
   return (
     <>
     <div className="MainPage-MainContainer">
-      {IsConnected ? <div className='MainPage-Welcome-div'> <p className='MainPage-Welcome-Texte'>Bon retour   </p><p className='MainPage-Welcome-Pseudo'>{Cookie.Pseudo}</p></div> : <p className='MainPage-Welcome-Texte'>Bienvenue sur MiniGames !!!</p>}
+      {IsConnected ? <div className='MainPage-Welcome-div'> <p className='MainPage-Welcome-Texte'>Bon retour   </p><p className='MainPage-Welcome-Pseudo'>{Cookie.Pseudo}</p></div> : <p className='MainPage-Welcome-Texte'>Bienvenue sur MiniZone !!!</p>}
       {IsCookie ? "":<div className='Main-Page-Cokkies'><p>Accepter les cookies : </p><button className='MainPage-Cookies-Yes' onClick={() => CookieOn()}>oui</button><button className='MainPage-Cookies-NO' onClick={() => CookieOff()}>non</button></div>}
     </div>
     </>
-    
   )
 }
+/* //todo des petits idée pour le site :)
+import React, { useRef } from 'react';
 
+function MyComponent() {
+  const myRef = useRef(null);
+
+  function handleClick() {
+    myRef.current.style.backgroundColor = 'red';
+  }
+
+  return (
+    <div>
+      <h1>Mon Composant</h1>
+      <button onClick={handleClick}>Changer la couleur</button>
+      <p ref={myRef}>Ceci est un paragraphe.</p>
+    </div>
+  );
+}
+
+export default MyComponent;
+*/
 export default MainPage
